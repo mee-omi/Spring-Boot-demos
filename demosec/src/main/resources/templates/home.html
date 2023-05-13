@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+<title>My sample site Home Page</title>
+
+<!-- reference CSS file -->
+<link rel="stylesheet" th:href="@{/css/demo.css}" />
+
+</head>
+
+<body>
+
+	<h2>Illusive perceptions</h2>
+	<hr>
+	Welcome to illusive perceptions home page :
+	<hr>
+	<p>
+	User: <span sec:authentication="principal.username"></span>
+	</p>
+	<p>
+	Role: <span sec:authentication="principal.authorities"></span>
+	</p>
+	<hr>
+	<!-- add link for leaders -->
+		<!--  to show manager content -->
+	<div sec:authorize="hasRole('MANAGER')">
+	<p>
+	<a th:href="@{/leaders}">
+		LeaderShip Meeting
+	</a> (Only for management)
+	</p>
+	</div>
+	<!--  to show admin content -->
+	<div sec:authorize="hasRole('ADMIN')">
+	<p>
+	<a th:href="@{/systems}">
+		IT Systems Meeting
+	</a> (Only for Admin Role)
+	</p>
+	</div>
+	<br/>
+	<form action="#" th:action="@{/logout}" method="POST">
+		<input type="submit" value="Logout" />
+	</form>
+</body>
+
+</html>
+
+
+
+
+
+

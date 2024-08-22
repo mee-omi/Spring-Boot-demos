@@ -2,11 +2,11 @@
 
 Here, we have demo projects for:
 
-Srping-security
-Crud operations using spring with hibernate
-Spring rest mvc
-Spring-Rest Api
-Thmeleaf with spring-bot
+Srping-security<br/>
+Crud operations using spring with hibernate<br/>
+Spring rest mvc<br/>
+Spring-Rest Api<br/>
+Thmeleaf with spring-bot<br/>
 
 
 

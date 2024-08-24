@@ -7,12 +7,20 @@ package com.techfreaks.restdemo.entity;
  * @author Omkar
  *
  */
+
 public class Stocks {
 
     private String stockId;
     private String strategyName;
     private String result;
     private String date;
+
+    /**
+     * empty constructor is needed
+     */
+    public Stocks() {
+        // TODO Auto-generated constructor stub
+    }
 
     public String getStockId() {
         return stockId;
